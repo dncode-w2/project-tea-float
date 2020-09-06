@@ -97,7 +97,6 @@ Media Queries
   }
   body {
     font-size: 1rem;
-    background: blue;
   }
   h1,
   h2,
@@ -127,6 +126,12 @@ Media Queries
   color: var(--clr-primary);
   background: var(--clr-primary-light);
 }
+
+.clearfix::after,
+.clearfix::before {
+  clear: both;
+}
+
 /* 
 ======
 Header
@@ -214,4 +219,18 @@ Skills
 
 .skill:hover .skill-icon {
   transform: translateY(-5px);
+}
+
+/* min:567px dst ... */
+@media screen and (min-width: 576px) {
+  .skill {
+    float: left;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .skill {
+    width: 25%;
+  }
 }
