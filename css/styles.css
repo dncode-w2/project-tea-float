@@ -120,14 +120,14 @@ p {
   text-transform: uppercase;
   background: var(--clr-primary);
   color: var(--clr-white);
-  /* add padding: tb:12px and lf:16  */
-  padding: 0.75rem 1rem;
+  /* add padding: tb:6px and lf:12  */
+  padding: 0.375rem 0.75rem;
   /* add spacing */
   letter-spacing: var(--spacing);
   font-weight: 700;
   transition: var(--transition);
   /* change fonts cz default fonts is 14px*/
-  font-size: 1rem;
+  font-size: 0.875rem;
   /* add border none cz this has border */
   border: none;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
@@ -184,8 +184,8 @@ and padding left right is 1 rem
 /*
 =================== 
  Header 
- =================== 
- */
+=================== 
+*/
 
 .header {
   /* set to min-height 
@@ -392,7 +392,7 @@ about-text */
   max-width: 26rem; /*416px */
 }
 
-/* add media query for float */
+/* add media query for float two coloumn */
 @media screen and (min-width: 992px) {
   .about-img,
   .about-info {
@@ -402,4 +402,35 @@ about-text */
   .about-info {
     padding-left: 2rem;
   }
+}
+
+/*
+=================== 
+ Products 
+=================== 
+*/
+
+/* add background whole from to section products */
+.products {
+  background: var(--clr-gray-10);
+}
+
+/* give space between products
+and article
+*/
+
+/* .product-info,
+.product-inventory {
+  padding: 2rem 0;
+
+} 
+its same with here*/
+
+.product article {
+  padding: 2rem 0;
+}
+
+/* and change color product-text */
+.product-text {
+  color: var(--clr-gray-5);
 }
