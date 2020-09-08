@@ -138,11 +138,54 @@ p {
   background: var(--clr-primary-light);
 }
 
-/* 
-===================
-Header
-===================
+/* for clearfix float */
+.clearfix::after,
+.clearfix::before {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+/* section-title be global css
+change color and font .section-title h3
 */
+
+.section-title h3 {
+  font-family: var(--ff-secondary);
+  color: var(--clr-primary);
+}
+
+/* add margin-bottom on section-title */
+.section-title {
+  margin-bottom: 2rem;
+}
+
+/* add padding top-bottom 
+to section-center for space between skill section*/
+.section-center {
+  padding: 4rem 0;
+  /* change width section-center be 85vw  */
+  width: 85vw;
+  margin: 0 auto;
+  /* add max-width for img
+  and remember on my laptop default width is 1387px */
+  max-width: 1170px;
+}
+
+/* here add 992px for media query
+and padding left right is 1 rem
+*/
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+    padding: 4rem 1rem;
+  }
+}
+/*
+=================== 
+ Header 
+ =================== 
+ */
 
 .header {
   /* set to min-height 
@@ -280,4 +323,83 @@ if click .skill:hover and then .skill-icons
 */
 .skill:hover .skill-icons {
   transform: translateY(-5px);
+}
+
+/* here skill class on article has 4 and will set to float
+changed use media query on screen 576px
+is small devices landscape phones..
+*/
+@media screen and (min-width: 576px) {
+  .skill {
+    float: left;
+    /* changed .skill be 2 coloumn use 50% */
+    width: 50%;
+  }
+}
+
+/* here skill class on article has 4 and will set to float
+changed use media query on screen 1200px
+is for desktop.
+*/
+@media screen and (min-width: 1200px) {
+  .skill {
+    width: 25%;
+  }
+}
+
+/* 
+===================
+About
+===================
+*/
+
+/* create space 
+padding top-bottom between :
+about-img, and about-info
+*/
+.about-img,
+.about-info {
+  padding: 2rem 0;
+}
+
+/* add border on div img */
+.about-picture-container {
+  background: var(--clr-primary);
+  border: 0.5rem solid var(--clr-primary); /*8px*/
+  /* and here change be max-width for image not bigger */
+  max-width: 30rem; /*480px*/
+  /* extra stuff */
+  overflow: hidden; /*here for hidden scale tranform*/
+}
+
+/* add picture be animation */
+.about-picture {
+  transition: var(--transition);
+}
+
+/* here for effect 
+if click div img container for target .about-pict
+will get effect
+*/
+.about-picture-container:hover .about-picture {
+  transform: scale(1.2);
+  opacity: 0.5;
+}
+
+/*max-width for paragraph 
+about-text */
+.about-text {
+  max-width: 26rem; /*416px */
+}
+
+/* add media query for float */
+@media screen and (min-width: 992px) {
+  .about-img,
+  .about-info {
+    float: left;
+    width: 50%;
+  }
+  .about-info {
+    padding-left: 2rem;
+  }
 }
