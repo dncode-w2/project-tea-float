@@ -210,3 +210,74 @@ just for line on bottom header
   height: 0.5rem; /*8px*/
   background: linear-gradient(var(--clr-primary), #e9b949, var(--clr-primary));
 }
+
+/* 
+===================
+Skills
+===================
+*/
+
+/* add background on whole section skills section */
+.skills {
+  background: var(--clr-gray-10);
+}
+
+/* add padding on each article skill */
+.skill {
+  /* move text to center */
+  text-align: center;
+  /* tb:40px lr:0 */
+  padding: 2.5rem 0;
+  /* add animation */
+  transition: var(--transition);
+}
+
+/* 
+skill-icons
+*/
+.skill-icons {
+  /* add display:inline-block
+  cz margin-top / bottom not respect on browser if 
+  element is inline element and span is inline element
+  */
+  display: inline-block;
+  /* changed font-size on skill-icons */
+  font-size: 2.5rem;
+  /* default margin-bottom on u r heading is :12px 
+  change be 20px*/
+  margin-bottom: 1.25rem;
+  /* change colors icon be primary */
+  color: var(--clr-primary);
+  /* add animation */
+  transition: var(--transition);
+}
+
+/* 
+for paragraph or skill-text
+*/
+
+.skill-text {
+  /* change colors */
+  color: var(--clr-gray-5);
+  /* here paragraph spanning all cross div
+  changed use max-width :300px
+  */
+  max-width: 18.75rem;
+  /* move text-paragraph to center use margin */
+  margin: 0 auto;
+}
+
+/* add hover on skill article */
+.skill:hover {
+  /* here will smooth cz before add transition on skill */
+  background: var(--clr-white);
+  /* add box-shadow y for each article skill */
+  box-shadow: 0 2px var(--clr-primary);
+}
+
+/* his means what's happen on skill-icons 
+if click .skill:hover and then .skill-icons
+*/
+.skill:hover .skill-icons {
+  transform: translateY(-5px);
+}
