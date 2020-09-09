@@ -13,8 +13,24 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <!-- nav -->
-
+    <!-- navbar -->
+    <!-- nav-btn -->
+    <span class="nav-btn" id="nav-btn">
+      <i class="fas fa-bars"></i>
+    </span>
+    <nav class="navbar" id="navbar">
+      <div class="navbar-header">
+        <span class="nav-close" id="nav-close">
+          <i class="fas fa-times"></i>
+        </span>
+        <ul class="nav-items">
+          <li><a href="index.html" class="nav-link">home</a></li>
+          <li><a href="skills.html" class="nav-link">skills</a></li>
+          <li><a href="about.html" class="nav-link">about</a></li>
+          <li><a href="products.html" class="nav-link">product</a></li>
+        </ul>
+      </div>
+    </nav>
     <!-- header -->
     <header class="header">
       <div class="banner">
@@ -352,5 +368,34 @@
       </div>
     </section>
     <!-- end of contact -->
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="section-center">
+        <div class="social-icons">
+          <!-- social-icons -->
+          <a href="#" class="social-icon">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <!-- end of social-icons -->
+          <!-- social-icons -->
+          <a href="#" class="social-icon">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <!-- end of social-icons -->
+          <!-- social-icons -->
+          <a href="#" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <!-- end of social-icons -->
+        </div>
+        <h4 class="footer-text">
+          &copy; 2020 <span class="company">tea station</span> all right
+          reserved
+        </h4>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
   </body>
 </html>
