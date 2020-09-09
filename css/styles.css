@@ -433,4 +433,113 @@ its same with here*/
 /* and change color product-text */
 .product-text {
   color: var(--clr-gray-5);
+  /* same with .about-text */
+  max-width: 26rem; /*416px */
+}
+
+/* here add margin-bottom 
+for each class product
+cz product still haven't space with product-1,2...
+*/
+.product {
+  margin-bottom: 2rem;
+}
+/* add radius on img and height, and 
+margin-bottom */
+.product-image {
+  border-radius: var(--radius);
+  margin-bottom: 2rem;
+  height: 17rem; /*272px*/
+  object-fit: cover;
+}
+
+.product-price {
+  color: var(--clr-primary);
+}
+
+/* add media query for float
+create 2 coloumn for 768px up
+*/
+@media screen and (min-width: 768px) {
+  .product {
+    float: left;
+    width: 50%;
+    /* add padding-right for space
+    between images */
+    padding-right: 2rem;
+  }
+}
+
+/* create 3 coloumn for 992px up */
+@media screen and (min-width: 992px) {
+  .product {
+    width: 33.3%;
+  }
+}
+
+/* create 2 column with 
+product-inventory on right from product-info  */
+@media screen and (min-width: 1200px) {
+  .product-info {
+    float: left;
+    width: 30%;
+  }
+  .product-inventory {
+    float: right;
+    width: 70%;
+  }
+
+  /* here add padding lr:2rem
+  cz 
+  */
+  .product {
+    margin-bottom: 0;
+    padding: 0 2rem;
+  }
+}
+
+/* add product-info 
+for padding top:bottom
+*/
+.product-info .btn {
+  margin-bottom: 2rem;
+}
+
+/*
+=================== 
+ Services 
+=================== 
+*/
+
+/* add margin-top for services-title
+for space between product */
+.services-title {
+  margin-top: 4rem;
+  /* add -4 rem for not space
+  cz before on section center use 4rem for top/bottom
+  */
+  margin-bottom: -4rem;
+  text-align: center;
+}
+
+/* add margin top:bottom
+for service card for space between title
+and add other properties
+*/
+.service-card {
+  margin: 2rem 0;
+  /* add background for each service card */
+  background: var(--clr-gray-10);
+  border-radius: var(--radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  /* if click will smooth
+  for smooth use transition */
+  transition: var(--transition);
+}
+
+/* add hover for effect animation */
+.service-card:hover {
+  /* add scale for images */
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
