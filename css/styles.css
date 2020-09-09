@@ -601,3 +601,126 @@ add float use mediaquery
     margin-right: 3.33%;
   }
 }
+
+/* service-icon
+move to center and modify with other properties
+*/
+
+/* this parent relative */
+.service-img-container {
+  position: relative;
+}
+
+/* is absoulte */
+.service-icon {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  font-size: 2rem;
+  color: var(--clr-primary);
+  background: var(--clr-primary-light);
+  /* 4px and 9.6px */
+  padding: 0.25rem 0.6rem;
+  border-radius: 50%;
+  transform: translate(-50%, 50%);
+  /* create border with same background with 
+  service-card */
+  border: 0.375rem solid var(--clr-gray-10);
+}
+
+/*
+=================== 
+Contact
+=================== 
+*/
+
+/* add background */
+.contact {
+  background: var(--clr-gray-10);
+}
+
+.contact-form,
+.contact-info {
+  margin: 1rem 0;
+}
+
+/* give space top/bottom between each contact-item */
+.contact-item {
+  margin-bottom: 1.75rem;
+}
+
+/* add color to contact-title
+be primary */
+.contact-title {
+  color: var(--clr-primary);
+  font-weight: 400;
+}
+
+/* change contact-text be uppercase */
+.contact-text {
+  text-transform: uppercase;
+}
+
+.contact-form {
+  background: var(--clr-white);
+  text-align: center;
+  border-radius: var(--radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  /* transition effect */
+  transition: var(--transition);
+  max-width: 35rem;
+}
+
+/* properties effect */
+.contact-form:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* add margin-top on contact-form */
+.contact-form h3 {
+  padding-top: 1.25rem;
+  color: var(--clr-gray-5);
+}
+
+/* give space top and bottom 
+between h3 and submit btn */
+.form-group {
+  padding: 1rem 1.5rem;
+}
+
+/* form-control  */
+.form-control {
+  /* be block cz default input is inline element */
+  display: block;
+  /* change border be none */
+  border: none;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  /* add background */
+  background: var(--clr-gray-10);
+  border-radius: var(--radius);
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+}
+
+/* here placeholder use font default arial
+for change style use this
+*/
+.form-control::placeholder {
+  font-family: var(--ff-primary);
+  color: var(--clr-gray-5);
+  letter-spacing: var(--spacing);
+}
+
+/* modify submit-btn */
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  /* add radius bottom left and right
+  because for top left right done on contact-form
+  */
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
