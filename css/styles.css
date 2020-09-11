@@ -208,12 +208,17 @@ and padding left right is 1 rem
   /* width: 100%;
   height: 100%; */
   background: var(--clr-gray-10);
+  /* this shadow for x in whole navbar */
   box-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
   /* hide navbar */
+  transform: translateX(-100%);
+  transition: var(--transition);
 }
 
 /* this moment for click button */
 .showNav {
+  /* 0 is back to position  */
+  transform: translate(0);
 }
 
 /* move-icon nav to right */
@@ -258,6 +263,14 @@ and padding left right is 1 rem
   color: var(--clr-primary);
   padding-left: 1.5rem;
   border-left: 0.25rem solid var(--clr-primary);
+}
+
+/* float here for width if 768px*/
+@media screen and (min-width: 768px) {
+  .navbar {
+    width: 80vw;
+    max-width: 17rem;
+  }
 }
 
 /*
