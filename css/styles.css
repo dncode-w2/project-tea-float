@@ -236,7 +236,7 @@ create 2 coloumn*/
   }
 }
 
-/* 4 coloumn for desktop 1200px */
+/* for 4 coloumn for desktop 1200px */
 @media screen and (min-width: 1200px) {
   .skill {
     width: 25%;
