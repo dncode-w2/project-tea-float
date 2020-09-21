@@ -1,108 +1,98 @@
-/* 
-===================
-Fonts
-===================
-*/
-
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Grand+Hotel&display=swap');
-
-/* 
-===================
-Variables
-===================
-*/
+@import url('https://fonts.googleapis.com/css?family=Catamaran:400,700|Grand+Hotel');
 
 :root {
   /* colours */
   --clr-primary: #678e3e;
-  --clr-primary-light: #beed8c;
-  --clr-gray-1: #102a42;
-  --clr-gray-5: #617d98;
-  --clr-gray-10: #f1f5f8;
+  --clr-primary-Light: #beed8c;
+  --clr-grey-1: #102a42;
+  --clr-grey-5: #617d98;
+  --clr-grey-10: #f1f5f8;
   --clr-white: #fff;
-
-  /* fonts */
+  /* font-family */
   --ff-primary: 'Catamaran', sans-serif;
   --ff-secondary: 'Grand Hotel', cursive;
-
-  /*Effect animation, spacing, and radius  */
+  /* add transition,radius,spacing */
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
   --transition: all 0.3s linear;
-  --spacing: 0.25rem; /* 4px */
-  --radius: 0.5rem; /*8px*/
 }
 
+/* CSS RESET */
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
+/* Set default Body with you want :
+  font-family,font-size,line-height,
+  color,background.
+*/
 body {
+  line-height: 1.5;
+  font-size: 0.875rem;
   font-family: var(--ff-primary);
   background: var(--clr-white);
-  color: var(--clr-gray-1);
-  line-height: 1.5;
-  font-size: 0.875rem; /*14px*/
+  color: var(--clr-grey-1);
 }
 
+/* set link a and img */
 a {
+  /* make sure for decoration is none */
   text-decoration: none;
 }
 
+/* img always spanning all cross */
 img {
-  display: block;
+  display: block; /*cz default is inline*/
   width: 100%;
 }
 
-/* setting for heading */
-
+/* set default all heading */
 h1,
 h2,
 h3,
 h4 {
-  letter-spacing: var(--spacing);
-  text-transform: capitalize;
   line-height: 1.25;
-  margin-bottom: 0.75rem; /* 12px*/
+  text-transform: capitalize;
+  margin-bottom: 0.75rem;
+  letter-spacing: var(--spacing);
 }
 
-/* set font size for heading */
-
+/* set font-size heading */
 h1 {
-  font-size: 3rem; /*48px*/
+  font-size: 3rem;
 }
 h2 {
-  font-size: 2rem; /*32px*/
+  font-size: 2rem;
 }
 h3 {
-  font-size: 1.5rem; /*24px*/
+  font-size: 1.5rem;
 }
 h4 {
-  font-size: 0.875rem; /*14px*/
+  font-size: 0.875rem;
 }
 
-/* set of paragraph */
-
+/* set margin-bottom for paragraph */
 p {
-  margin-bottom: 1.25rem; /*20px*/
+  margin-bottom: 1.25rem;
 }
 
-/* media query for heading and body */
-
+/* if display:800px will bigger */
 @media screen and (min-width: 800px) {
   h1 {
-    font-size: 4rem; /*64px*/
+    font-size: 4rem;
   }
   h2 {
-    font-size: 2.25rem; /*36px*/
+    font-size: 2.5rem;
   }
   h3 {
-    font-size: 2rem; /*32px*/
+    font-size: 2rem;
   }
   h4 {
     font-size: 1rem;
   }
-
+  /* set body font-size:1rem */
   body {
     font-size: 1rem;
   }
@@ -114,746 +104,125 @@ p {
   }
 }
 
-/* more global */
+/* 
+MORE GLOBAL Style
+*/
 .btn {
   display: inline-block;
-  text-transform: uppercase;
   background: var(--clr-primary);
   color: var(--clr-white);
-  /* add padding: tb:6px and lf:12  */
-  padding: 0.375rem 0.75rem;
-  /* add spacing */
-  letter-spacing: var(--spacing);
-  font-weight: 700;
-  transition: var(--transition);
-  /* change fonts cz default fonts is 14px*/
-  font-size: 0.875rem;
-  /* add border none cz this has border */
-  border: none;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-.btn:hover {
-  color: var(--clr-primary);
-  background: var(--clr-primary-light);
-}
-
-/* for clearfix float */
-.clearfix::after,
-.clearfix::before {
-  content: '';
-  clear: both;
-  display: table;
-}
-
-/* section-title be global css
-change color and font .section-title h3
-*/
-
-.section-title h3 {
-  font-family: var(--ff-secondary);
-  color: var(--clr-primary);
-}
-
-/* add margin-bottom on section-title */
-.section-title {
-  margin-bottom: 2rem;
-}
-
-/* add padding top-bottom 
-to section-center for space between skill section*/
-.section-center {
-  padding: 4rem 0;
-  /* change width section-center be 85vw  */
-  width: 85vw;
-  margin: 0 auto;
-  /* add max-width for img
-  and remember on my laptop default width is 1387px */
-  max-width: 1170px;
-}
-
-/* here add 992px for media query
-and padding left right is 1 rem
-*/
-@media screen and (min-width: 992px) {
-  .section-center {
-    width: 95vw;
-    padding: 4rem 1rem;
-  }
-}
-
-/*
-=================== 
- navbar 
-=================== 
-*/
-.nav-btn {
-  color: var(--clr-primary);
-  font-size: 2.5rem;
-  position: fixed;
-  top: 5%;
-  left: 5%;
-  z-index: 1;
-  cursor: pointer;
-  /* animation */
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-  /* width: 100%;
-  height: 100%; */
-  background: var(--clr-gray-10);
-  /* this shadow for x in whole navbar */
-  box-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
-  /* hide navbar */
-  transform: translateX(-100%);
-  transition: var(--transition);
-}
-
-/* this moment for click button */
-.showNav {
-  /* 0 is back to position  */
-  transform: translate(0);
-}
-
-/* move-icon nav to right */
-.navbar-header {
-  text-align: right;
-  padding-right: 1.5rem;
-}
-
-/* change size icon  */
-.nav-close {
-  font-size: 2.5rem;
-  cursor: pointer;
-  color: #f29c9c;
-  transition: var(--transition);
-}
-
-/* for effect  */
-.nav-close:hover {
-  /* darker red */
-  color: #bb2525;
-}
-
-/* remove list-style */
-.nav-items {
-  list-style-type: none;
-}
-
-/* dont forget display block cz this inline element */
-.nav-link {
-  display: block;
-  font-size: 1.5rem;
-  padding: 0.25rem 1rem;
+  padding: 0.75rem 1rem;
   text-transform: uppercase;
-  letter-spacing: var(--transition);
-  color: var(--clr-gray-5);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: var(--spacing);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
   transition: var(--transition);
 }
 
-/* for effect */
-.nav-link:hover {
-  background: var(--clr-primary-light);
+/* btn if click */
+.btn:hover {
+  background: var(--clr-primary-Light);
   color: var(--clr-primary);
-  padding-left: 1.5rem;
-  border-left: 0.25rem solid var(--clr-primary);
 }
 
-/* float here for width if 768px*/
-@media screen and (min-width: 768px) {
-  .navbar {
-    width: 80vw;
-    max-width: 17rem;
-  }
-}
-
-/*
-=================== 
- Header 
-=================== 
+/* 
+============
+HEADER
+============
 */
 
 .header {
-  /* set to min-height 
-  for big-screen or small screen and be responsive */
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('../images/main-bcg.jpeg') center/cover no-repeat fixed;
-  /* add position be relative */
-  position: relative;
-  /* add animation */
+  position: relative; /* for parent banner*/
+  /* for animation */
   overflow-x: hidden;
 }
 
-/* here banner for text be center */
+/* set banner to center */
 .banner {
-  text-align: center;
-  /* absolute with parent header */
   position: absolute;
+  text-align: center;
   top: 50%;
   left: 50%;
-  /* 
-  cz text actually not center
-  add negative translate x and y for be center
-  */
   transform: translate(-50%, -50%);
 }
 
-/* set banner h2 */
+/* banner h2 */
 .banner h2 {
-  /* change font and color text */
   font-family: var(--ff-secondary);
   color: var(--clr-primary);
-  /* animation */
 }
 
-/* set banner h1 */
+/* banner h1 */
 .banner h1 {
-  /* overide here so not same with root */
-  /* change h1 be uppercase and change color */
   text-transform: uppercase;
   color: var(--clr-white);
-  /* add margin top 20px and 
-  bottom 32px */
+
+  /* add margin-top, and bottom */
   margin-top: 1.25rem;
   margin-bottom: 2rem;
   /* animation */
 }
 
-/* add outline and offset on banner-btn */
 .banner-btn {
-  /* 2px */
   outline: 0.125rem solid var(--clr-primary);
-  /* 4px */
   outline-offset: 0.25rem;
-  /* and override again change font-size and padding 
-  be bigger*/
-  font-size: 1.25rem; /*20px*/
-  padding: 1rem 1.75rem; /*tb: 16px lr:28px*/
+  font-size: 1.25rem;
+  padding: 1rem 1.75rem;
 }
 
-/* add content-divider
-just for line on bottom header
-*/
+/* content-divider */
 .content-divider {
-  height: 0.5rem; /*8px*/
-  background: linear-gradient(var(--clr-primary), #e9b949, var(--clr-primary));
+  height: 0.5rem;
+  background: linear-gradient(
+    to left,
+    var(--clr-primary),
+    #e9b949,
+    var(--clr-primary)
+  );
 }
 
 /* 
-===================
-Skills
-===================
+============
+SKILLS
+============
 */
 
-/* add background on whole section skills section */
 .skills {
-  background: var(--clr-gray-10);
+  background: var(--clr-grey-10);
 }
 
-/* add padding on each article skill */
 .skill {
-  /* move text to center */
   text-align: center;
-  /* tb:40px lr:0 */
   padding: 2.5rem 0;
-  /* add animation */
-  transition: var(--transition);
+  transition: var(--transition); /*add for hover be smooth*/
 }
 
-/* 
-skill-icons
-*/
-.skill-icons {
-  /* add display:inline-block
-  cz margin-top / bottom not respect on browser if 
-  element is inline element and span is inline element
-  */
+.skill-icon {
   display: inline-block;
-  /* changed font-size on skill-icons */
   font-size: 2.5rem;
-  /* default margin-bottom on u r heading is :12px 
-  change be 20px*/
   margin-bottom: 1.25rem;
-  /* change colors icon be primary */
   color: var(--clr-primary);
-  /* add animation */
   transition: var(--transition);
 }
-
-/* 
-for paragraph or skill-text
-*/
 
 .skill-text {
-  /* change colors */
-  color: var(--clr-gray-5);
-  /* here paragraph spanning all cross div
-  changed use max-width :300px
-  */
-  max-width: 18.75rem;
-  /* move text-paragraph to center use margin */
+  color: var(--clr-grey-5);
+  max-width: 17rem;
   margin: 0 auto;
 }
 
-/* add hover on skill article */
 .skill:hover {
-  /* here will smooth cz before add transition on skill */
   background: var(--clr-white);
-  /* add box-shadow y for each article skill */
   box-shadow: 0 2px var(--clr-primary);
 }
 
-/* his means what's happen on skill-icons 
-if click .skill:hover and then .skill-icons
-*/
-.skill:hover .skill-icons {
+/* add icons for effect */
+.skill:hover .skill-icon {
   transform: translateY(-5px);
-}
-
-/* here skill class on article has 4 and will set to float
-changed use media query on screen 576px
-is small devices landscape phones..
-*/
-@media screen and (min-width: 576px) {
-  .skill {
-    float: left;
-    /* changed .skill be 2 coloumn use 50% */
-    width: 50%;
-  }
-}
-
-/* here skill class on article has 4 and will set to float
-changed use media query on screen 1200px
-is for desktop.
-*/
-@media screen and (min-width: 1200px) {
-  .skill {
-    width: 25%;
-  }
-}
-
-/* 
-===================
-About
-===================
-*/
-
-/* create space 
-padding top-bottom between :
-about-img, and about-info
-*/
-.about-img,
-.about-info {
-  padding: 2rem 0;
-}
-
-/* add border on div img */
-.about-picture-container {
-  background: var(--clr-primary);
-  border: 0.5rem solid var(--clr-primary); /*8px*/
-  /* and here change be max-width for image not bigger */
-  max-width: 30rem; /*480px*/
-  /* extra stuff */
-  overflow: hidden; /*here for hidden scale tranform*/
-}
-
-/* add picture be animation */
-.about-picture {
-  transition: var(--transition);
-}
-
-/* here for effect 
-if click div img container for target .about-pict
-will get effect
-*/
-.about-picture-container:hover .about-picture {
-  transform: scale(1.2);
-  opacity: 0.5;
-}
-
-/*max-width for paragraph 
-about-text */
-.about-text {
-  max-width: 26rem; /*416px */
-}
-
-/* add media query for float two coloumn */
-@media screen and (min-width: 992px) {
-  .about-img,
-  .about-info {
-    float: left;
-    width: 50%;
-  }
-  .about-info {
-    padding-left: 2rem;
-  }
-}
-
-/*
-=================== 
- Products 
-=================== 
-*/
-
-/* add background whole from to section products */
-.products {
-  background: var(--clr-gray-10);
-}
-
-/* give space between products
-and article
-*/
-
-/* .product-info,
-.product-inventory {
-  padding: 2rem 0;
-
-} 
-its same with here*/
-
-.product article {
-  padding: 2rem 0;
-}
-
-/* and change color product-text */
-.product-text {
-  color: var(--clr-gray-5);
-  /* same with .about-text */
-  max-width: 26rem; /*416px */
-}
-
-/* here add margin-bottom 
-for each class product
-cz product still haven't space with product-1,2...
-*/
-.product {
-  margin-bottom: 2rem;
-}
-/* add radius on img and height, and 
-margin-bottom */
-.product-image {
-  border-radius: var(--radius);
-  margin-bottom: 2rem;
-  height: 17rem; /*272px*/
-  object-fit: cover;
-}
-
-.product-price {
-  color: var(--clr-primary);
-}
-
-/* add media query for float
-create 2 coloumn for 768px up
-*/
-@media screen and (min-width: 768px) {
-  .product {
-    float: left;
-    width: 50%;
-    /* add padding-right for space
-    between images */
-    padding-right: 2rem;
-  }
-}
-
-/* create 3 coloumn for 992px up */
-@media screen and (min-width: 992px) {
-  .product {
-    width: 33.3%;
-  }
-}
-
-/* create 2 column with 
-product-inventory on right from product-info  */
-@media screen and (min-width: 1200px) {
-  .product-info {
-    float: left;
-    width: 30%;
-  }
-  .product-inventory {
-    float: right;
-    width: 70%;
-  }
-
-  /* here add padding lr:2rem
-  cz 
-  */
-  .product {
-    margin-bottom: 0;
-    padding: 0 2rem;
-  }
-}
-
-/* add product-info 
-for padding top:bottom
-*/
-.product-info .btn {
-  margin-bottom: 2rem;
-}
-
-/*
-=================== 
- Services 
-=================== 
-*/
-
-/* add margin-top for services-title
-for space between product */
-.services-title {
-  margin-top: 4rem;
-  /* add -4 rem for not space
-  cz before on section center use 4rem for top/bottom
-  */
-  margin-bottom: -4rem;
-  text-align: center;
-}
-
-/* add margin top:bottom
-for service card for space between title
-and add other properties
-*/
-.service-card {
-  margin: 2rem 0;
-  /* add background for each service card */
-  background: var(--clr-gray-10);
-  border-radius: var(--radius);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  /* if click will smooth
-  for smooth use transition */
-  transition: var(--transition);
-}
-
-/* add hover for effect animation */
-.service-card:hover {
-  /* add scale for images */
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.service-img {
-  height: 17rem;
-  object-fit: cover;
-  /* here just topleft and topright be radius
-  not all  */
-  border-top-left-radius: var(--radius);
-  border-top-right-radius: var(--radius);
-}
-
-.service-info {
-  /* padding top,right,bottom,left */
-  text-align: center;
-  padding: 3rem 1rem 2.5rem 1rem;
-}
-
-/* change max-width p for not spanning */
-.service-info p {
-  max-width: 20rem;
-  color: var(--clr-gray-5);
-  margin: 0 auto;
-}
-
-.service-btn {
-  margin-top: 1.25rem;
-  text-transform: capitalize;
-  /* 6px 8px */
-  padding: 0.375rem 0.5rem;
-  font-weight: 400;
-  /* change font-size before 14px be 12px */
-  font-size: 0.75rem;
-  border-radius: var(--radius);
-}
-
-/* 
-add float use mediaquery
-*/
-@media screen and (min-width: 768px) {
-  .service-card {
-    float: left;
-    /* create two column 45% for width
-    and 5% for margin cz max 50%
-    */
-    width: 45%;
-    margin-right: 5%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .service-card {
-    float: left;
-    /* create three column 45% for width
-    and 5% for margin.
-    */
-    width: 30%;
-    margin-right: 3.33%;
-  }
-}
-
-/* service-icon
-move to center and modify with other properties
-*/
-
-/* this parent relative */
-.service-img-container {
-  position: relative;
-}
-
-/* is absoulte */
-.service-icon {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  font-size: 2rem;
-  color: var(--clr-primary);
-  background: var(--clr-primary-light);
-  /* 4px and 9.6px */
-  padding: 0.25rem 0.6rem;
-  border-radius: 50%;
-  transform: translate(-50%, 50%);
-  /* create border with same background with 
-  service-card */
-  border: 0.375rem solid var(--clr-gray-10);
-}
-
-/*
-=================== 
-Contact
-=================== 
-*/
-
-/* add background */
-.contact {
-  background: var(--clr-gray-10);
-}
-
-.contact-form,
-.contact-info {
-  margin: 1rem 0;
-}
-
-/* give space top/bottom between each contact-item */
-.contact-item {
-  margin-bottom: 1.75rem;
-}
-
-/* add color to contact-title
-be primary */
-.contact-title {
-  color: var(--clr-primary);
-  font-weight: 400;
-}
-
-/* change contact-text be uppercase */
-.contact-text {
-  text-transform: uppercase;
-}
-
-.contact-form {
-  background: var(--clr-white);
-  text-align: center;
-  border-radius: var(--radius);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  /* transition effect */
-  transition: var(--transition);
-  max-width: 35rem;
-}
-
-/* properties effect */
-.contact-form:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* add margin-top on contact-form */
-.contact-form h3 {
-  padding-top: 1.25rem;
-  color: var(--clr-gray-5);
-}
-
-/* give space top and bottom 
-between h3 and submit btn */
-.form-group {
-  padding: 1rem 1.5rem;
-}
-
-/* form-control  */
-.form-control {
-  /* be block cz default input is inline element */
-  display: block;
-  /* change border be none */
-  border: none;
-  width: 100%;
-  padding: 0.75rem 1rem;
-  margin-bottom: 1.25rem;
-  /* add background */
-  background: var(--clr-gray-10);
-  border-radius: var(--radius);
-  text-transform: uppercase;
-  letter-spacing: var(--spacing);
-}
-
-/* here placeholder use font default arial
-for change style use this
-*/
-.form-control::placeholder {
-  font-family: var(--ff-primary);
-  color: var(--clr-gray-5);
-  letter-spacing: var(--spacing);
-}
-
-/* modify submit-btn */
-.submit-btn {
-  display: block;
-  width: 100%;
-  padding: 1rem;
-  /* add radius bottom left and right
-  because for top left right done on contact-form
-  */
-  border-bottom-left-radius: var(--radius);
-  border-bottom-right-radius: var(--radius);
-}
-
-/* media query */
-@media screen and (min-width: 768px) {
-  .contact-info,
-  .contact-form {
-    float: left;
-    width: 50%;
-  }
-}
-
-/*
-=================== 
-Footer
-=================== 
-*/
-.footer {
-  background: #222;
-  text-align: center;
-}
-
-.social-icon {
-  color: var(--clr-white);
-  font-size: 1.5rem;
-  margin-right: 1rem;
-  transition: var(--transition);
-}
-
-.social-icon:hover {
-  color: var(--clr-primary);
-}
-
-.footer-text {
-  margin-top: 1.25rem;
-  color: var(--clr-white);
-  font-weight: 400;
-  font-size: 1.25rem;
-}
-
-.company {
-  color: var(--clr-primary);
 }
