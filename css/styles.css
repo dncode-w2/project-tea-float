@@ -226,3 +226,19 @@ SKILLS
 .skill:hover .skill-icon {
   transform: translateY(-5px);
 }
+
+/* Float mediascreen :567px 
+create 2 coloumn*/
+@media screen and (min-width: 567px) {
+  .skill {
+    float: left;
+    width: 50%;
+  }
+}
+
+/* 4 coloumn for desktop 1200px */
+@media screen and (min-width: 1200px) {
+  .skill {
+    width: 25%;
+  }
+}
