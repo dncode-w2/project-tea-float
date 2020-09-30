@@ -145,10 +145,17 @@ MORE GLOBAL Style
 }
 
 .section-center {
-  padding: 4rem 0;
+  padding: 4rem 1rem;
   width: 85vw;
   max-width: 1170px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+    padding: 4rem 1rem;
+  }
 }
 
 /* 
@@ -271,6 +278,9 @@ create 2 coloumn*/
 ABOUT
 ============
 */
+/* .about {
+  background: #ddd;
+} */
 
 /* give space on about-img , and about-info */
 .about-img,
@@ -281,6 +291,7 @@ ABOUT
 .picture-container {
   border: 0.5rem solid var(--clr-primary);
   max-width: 30rem;
+  /* extra stuff */
   overflow: hidden;
 }
 
