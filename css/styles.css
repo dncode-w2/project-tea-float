@@ -111,9 +111,9 @@ MORE GLOBAL Style
   display: inline-block;
   background: var(--clr-primary);
   color: var(--clr-white);
-  padding: 0.75rem 1rem;
+  padding: 0.375rem 0.75rem;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: var(--spacing);
   border: none;
@@ -318,5 +318,163 @@ ABOUT
   }
   .about-img {
     padding-right: 2rem;
+  }
+}
+
+/* 
+============
+PRODUCTS
+============
+*/
+
+.products {
+  background: var(--clr-grey-10);
+}
+
+/* give space top and bottom to each article */
+.products article {
+  padding: 2rem 0;
+}
+
+/* text dont spanning */
+.product-text {
+  max-width: 30rem;
+  color: var(--clr-grey-5);
+  text-align: justify;
+}
+
+/* change image */
+.product-img {
+  border-radius: var(--radius);
+  height: 17rem;
+  object-fit: cover;
+  /* dont-forget margin-bottom */
+  margin-bottom: 2rem;
+}
+
+/* change color price */
+.product-price {
+  color: var(--clr-primary);
+}
+
+/* here give space for each product 
+to top and bottom*/
+.product {
+  margin: 2rem 0;
+}
+
+/* responsive  */
+@media screen and (min-width: 768px) {
+  /* be 2 coloumn */
+  .product {
+    float: left;
+    width: 50%;
+    /* give padding-right for pic not near */
+    padding-right: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /* be 3 coloumn */
+  .product {
+    width: 33.3%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* large desktop */
+  .product-info {
+    float: left;
+    width: 30%;
+  }
+
+  .product-inventory {
+    float: left;
+    width: 70%;
+  }
+
+  .product {
+    margin-bottom: 0;
+    /* tb:0 lr:1rem for space */
+    padding: 0 1rem;
+  }
+}
+
+/* services */
+.services-title {
+  margin-top: 4rem;
+  margin-bottom: -2rem;
+  text-align: center;
+}
+
+.service-card {
+  margin: 2rem 0;
+  background: #333;
+  color: var(--clr-white);
+  border-radius: var(--radius);
+  box-shadow: 0 5px 1px rgba(51, 51, 51, 0.2);
+  transition: var(--transition);
+}
+
+.service-card:hover {
+  box-shadow: 4px 5px 1px rgba(51, 51, 51, 0.5);
+  transform: scale(1.02);
+}
+
+.service-image {
+  height: 17rem;
+  object-fit: cover;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+.service-info {
+  text-align: center;
+  padding: 3rem 1.2rem 2rem 1.2rem;
+}
+
+.service-text {
+  max-width: 26rem;
+  margin: 0 auto;
+}
+
+.service-btn {
+  display: block;
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: var(--radius);
+  margin-top: 2rem;
+}
+
+.service-image-container {
+  position: relative;
+}
+
+.service-icon {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  font-size: 2rem;
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  padding: 1rem 1.75rem;
+  border-radius: 50%;
+  border: 0.45rem solid #333;
+}
+
+@media screen and (min-width: 768px) {
+  .service-card {
+    float: left;
+    width: 47%;
+    margin-right: 3%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .service-card {
+    float: left;
+    width: 30%;
+    margin-right: 3%;
   }
 }
