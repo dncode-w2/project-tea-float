@@ -432,3 +432,77 @@ services
     margin-right: 3%;
   }
 }
+
+/* 
+================
+contact
+================
+*/
+
+.contact {
+  background: var(--clr-grey-10);
+}
+
+.contact-info,
+.contact-form {
+  margin: 1.25rem 0;
+}
+
+.contact-item {
+  margin-bottom: 1.25rem;
+}
+
+.contact-title {
+  color: var(--clr-primary);
+  font-weight: 400;
+}
+
+.contact-text {
+  text-transform: uppercase;
+}
+
+.contact-form h3 {
+  color: var(--clr-grey-5);
+}
+
+.contact-form {
+  background: var(--clr-white);
+  text-align: center;
+  border-radius: var(--radius);
+}
+
+.form-group {
+  padding: 1.25rem 1.25rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 0.65rem;
+  border: none;
+  background: var(--clr-grey-10);
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 1.25rem;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+
+.form-control::placeholder {
+  text-transform: uppercase;
+  font-family: var(--ff-primary);
+  letter-spacing: var(--spacing);
+  color: var(--clr-grey-1);
+}
+
+@media screen and (min-width: 992px) {
+  .contact-form,
+  .contact-info {
+    float: left;
+    width: 50%;
+  }
+}
