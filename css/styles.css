@@ -160,6 +160,72 @@ MORE GLOBAL Style
 
 /* 
 ============
+NAVBAR
+============
+*/
+.navbar-btn {
+  position: fixed;
+  top: 1%;
+  left: 1%;
+  font-size: 2rem;
+  color: var(--clr-primary);
+  z-index: 1;
+}
+
+.navbar {
+  background: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  /* hidden navbar */
+  transform: translateX(-100%);
+}
+
+.showNav {
+  transform: translate(0);
+}
+
+.navbar-header {
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.nav-close {
+  font-size: 2rem;
+  color: rgb(236, 84, 84);
+  cursor: pointer;
+}
+
+.nav-close:hover {
+  font-size: 2rem;
+  color: rgb(243, 50, 50);
+}
+
+.nav-link {
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: var(--spacing);
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem;
+  color: #fff;
+  transition: var(--transition);
+}
+
+.nav-items {
+  list-style-type: none;
+}
+.nav-link:hover {
+  background: var(--clr-primary-Light);
+  color: var(--clr-primary);
+}
+
+/* 
+============
 HEADER
 ============
 */
@@ -477,4 +543,100 @@ to top and bottom*/
     width: 30%;
     margin-right: 3%;
   }
+}
+
+/* 
+============
+CONTACT
+============
+*/
+.contact {
+  background: var(--clr-grey-10);
+}
+
+.contact-title {
+  color: var(--clr-primary);
+  font-weight: 400;
+}
+
+.contact-text {
+  text-transform: uppercase;
+}
+.contact-item {
+  margin-bottom: 2rem;
+}
+
+.contact-info,
+.contact-form {
+  margin: 2rem 0;
+}
+
+.contact-form {
+  background: #333;
+  text-align: center;
+  border-radius: var(--radius);
+}
+
+.contact-form h3 {
+  color: var(--clr-grey-5);
+  padding-top: 1rem;
+}
+
+.contact-group {
+  padding: 1rem;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 1.25rem;
+  background: var(--clr-grey-10);
+  margin-bottom: 0.75rem;
+  border-radius: var(--radius);
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 1.25rem;
+  margin-top: 2rem;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+
+.form-control::placeholder {
+  text-transform: uppercase;
+  font-family: var(--ff-primary);
+  letter-spacing: var(--spacing);
+}
+
+/* 
+============
+FOOTER
+============
+*/
+.footer {
+  background: #333;
+  text-align: center;
+}
+
+.social-icon {
+  font-size: 2rem;
+  color: #fff;
+  margin-right: 1.25rem;
+}
+
+.social-icon:hover {
+  color: var(--clr-primary);
+}
+
+.footer-text {
+  margin-top: 2rem;
+  color: #fff;
+  font-weight: 400;
+}
+
+.company {
+  color: var(--clr-primary-Light);
+  font-weight: 700;
 }

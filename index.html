@@ -14,8 +14,30 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <!-- navbar-btn -->
+    <span class="navbar-btn" id="navbar-btn">
+      <i class="fas fa-bars"></i>
+    </span>
+    <!-- end of navbar-btn -->
+    <!-- navbar -->
+    <nav class="navbar" id="navbar">
+      <!-- navbar-header -->
+      <div class="navbar-header">
+        <span class="nav-close" id="nav-close">
+          <i class="fas fa-times"></i>
+        </span>
+      </div>
+      <!-- nav-items -->
+      <ul class="nav-items">
+        <li><a href="#header" class="nav-link">home</a></li>
+        <li><a href="#skill" class="nav-link">skills</a></li>
+        <li><a href="#about" class="nav-link">about</a></li>
+        <li><a href="#product" class="nav-link">product</a></li>
+        <li><a href="#contact" class="nav-link">contact</a></li>
+      </ul>
+    </nav>
     <!-- header -->
-    <header class="header">
+    <header class="header" id="header">
       <div class="banner">
         <h2>over one hundred flavours of</h2>
         <h1>
@@ -29,7 +51,7 @@
     <!-- content-divider -->
     <div class="content-divider"></div>
     <!-- skills section -->
-    <section class="skills clearfix">
+    <section class="skills clearfix" id="skill">
       <!-- single skill 1-->
       <article class="skill">
         <span class="skill-icon">
@@ -76,7 +98,7 @@
       <!-- enf of single skill -->
     </section>
     <!-- about section -->
-    <section class="about">
+    <section class="about" id="about">
       <div class="section-center clearfix">
         <!-- about-img -->
         <article class="about-img">
@@ -106,7 +128,7 @@
     </section>
     <!-- end of about section -->
     <!-- product section -->
-    <section class="products">
+    <section class="products" id="products">
       <!-- reusable section-container -->
       <div class="section-center clearfix">
         <!-- product-info -->
@@ -164,7 +186,7 @@
     </section>
     <!-- end-of product section -->
     <!-- services section -->
-    <section class="services">
+    <section class="services" id="service">
       <div class="section-title services-title">
         <h3>explores</h3>
         <h2>our services</h2>
@@ -218,6 +240,105 @@
             <a href="" class="btn service-btn">read more</a>
           </div>
         </article>
+      </div>
+    </section>
+    <!-- section contact -->
+    <section class="contact" id="contact">
+      <div class="section-center">
+        <!-- contact-info -->
+        <article class="contact-info">
+          <!-- contact-item -->
+          <div class="contact-item">
+            <h4 class="contact-title">
+              <span class="contact-icon">
+                <i class="fas fa-location-arrow"></i>
+              </span>
+              address
+            </h4>
+            <h4 class="contact-text">street heaven from god</h4>
+          </div>
+          <!-- end of contact-item -->
+          <!-- contact-item -->
+          <div class="contact-item">
+            <h4 class="contact-title">
+              <span class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </span>
+              email
+            </h4>
+            <h4 class="contact-text">green-tea@greencompany.com</h4>
+          </div>
+          <!-- end of contact-item -->
+          <!-- contact-item -->
+          <div class="contact-item">
+            <h4 class="contact-title">
+              <span class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </span>
+              address
+            </h4>
+            <h4 class="contact-text">+ 555 - 5555- 5555</h4>
+          </div>
+          <!-- end of contact-item -->
+        </article>
+        <!-- contact-form -->
+        <article class="contact-form">
+          <h3>contact us</h3>
+          <!-- form -->
+          <form>
+            <div class="contact-group">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="name"
+                class="form-control"
+              />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="email"
+                class="form-control"
+              />
+              <textarea
+                type="text"
+                name="message"
+                id="message"
+                placeholder="message"
+                class="form-control"
+                rows="5"
+              ></textarea>
+            </div>
+            <a href="#" class="btn submit-btn">submit here</a>
+          </form>
+        </article>
+      </div>
+    </section>
+    <!-- end-of contact section -->
+    <!-- footer -->
+    <section class="footer">
+      <div class="section-center">
+        <!-- icons -->
+        <a href="#" class="social-icon">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <!-- end of icons -->
+        <!-- icons -->
+        <a href="#" class="social-icon">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <!-- end of icons -->
+        <!-- icons -->
+        <a href="#" class="social-icon">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <!-- end of icons -->
+        <h4 class="footer-text">
+          website design created by:
+          <span class="company">green-company</span> &copy
+          <span id="date"></span>
+        </h4>
       </div>
     </section>
     <!-- js -->
