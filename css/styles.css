@@ -160,16 +160,93 @@ MORE GLOBAL Style
 
 /* 
 ============
+ANIMATION
+============
+*/
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* for h2 banner */
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-200px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(200px);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(-50px);
+    opacity: 1;
+  }
+}
+
+/* for h1 banner */
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(200px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(-200px);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(50px);
+    opacity: 1;
+  }
+}
+
+/* banner-btn */
+/* for h1 banner */
+@keyframes show {
+  0% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 
+============
 NAVBAR
 ============
 */
 .navbar-btn {
   position: fixed;
-  top: 1%;
-  left: 1%;
+  top: 5%;
+  left: 5%;
   font-size: 2rem;
   color: var(--clr-primary);
   z-index: 1;
+  /* animation */
+  animation: bounce 2s infinite;
 }
 
 .navbar {
@@ -224,6 +301,13 @@ NAVBAR
   color: var(--clr-primary);
 }
 
+@media screen and (min-width: 768px) {
+  .navbar {
+    width: 25vw;
+    max-width: 30rem;
+  }
+}
+
 /* 
 ============
 HEADER
@@ -252,6 +336,8 @@ HEADER
 .banner h2 {
   font-family: var(--ff-secondary);
   color: var(--clr-primary);
+  /* animation */
+  animation: slideFromRight 5s ease-in-out 1;
 }
 
 /* banner h1 */
@@ -263,6 +349,7 @@ HEADER
   margin-top: 1.25rem;
   margin-bottom: 2rem;
   /* animation */
+  animation: slideFromLeft 5s ease-in-out 1;
 }
 
 .banner-btn {
@@ -270,6 +357,8 @@ HEADER
   outline-offset: 0.25rem;
   font-size: 1.25rem;
   padding: 1rem 1.75rem;
+  /* animation */
+  animation: show 5s ease-in-out 1;
 }
 
 /* content-divider */
